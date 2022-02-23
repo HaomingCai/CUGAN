@@ -12,7 +12,7 @@ By [Haoming Cai*](https://scholar.google.com/citations?user=mePn76IAAAAJ&hl=en),
 
 <p align="center">
 
-  <img src="figures/modulation_real.png.png">
+  <img src="figures/modulation_real.png">
   Real-World Modulation
 
 </p>
