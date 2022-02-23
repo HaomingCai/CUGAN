@@ -1,6 +1,6 @@
 # CUGAN
 
-### Toward Interactive Modulation for Photo-Realistic Image Restoration
+### Toward Interactive Modulation for Photo-Realistic Image Restoration. [(Paper Link)](https://openaccess.thecvf.com/content/CVPR2021W/NTIRE/html/Cai_Toward_Interactive_Modulation_for_Photo-Realistic_Image_Restoration_CVPRW_2021_paper.html)
 By [Haoming Cai*](https://scholar.google.com/citations?user=mePn76IAAAAJ&hl=en), [Jingwen He*](https://scholar.google.com/citations?hl=en&user=GUxrycUAAAAJ&view_op=list_works&sortby=pubdate), [Yu Qiao](http://mmlab.siat.ac.cn/yuqiao/), and [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=en) in CVPRW, 2021.
 
 <p align="center"> 
