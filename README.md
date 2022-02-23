@@ -55,4 +55,4 @@ By [Haoming Cai*](https://scholar.google.com/citations?user=mePn76IAAAAJ&hl=en),
 
 ## Acknowledgement
 
-- This code is based on [mmsr](https://github.com/open-mmlab/mmsr) and [CResMD](https://github.com/hejingwenhejingwen/CResMD).
+- This code is based on [mmsr](https://github.com/open-mmlab/mmsr), [BasicSR](https://github.com/xinntao/BasicSR) and [CResMD](https://github.com/hejingwenhejingwen/CResMD).
