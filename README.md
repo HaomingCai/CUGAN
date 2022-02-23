@@ -1,7 +1,7 @@
 # CUGAN
 
 ### Toward Interactive Modulation for Photo-Realistic Image Restoration
-By [Haoming Cai*](https://scholar.google.com/citations?user=mePn76IAAAAJ&hl=en), [Jingwen He*](https://scholar.google.com/citations?hl=en&user=GUxrycUAAAAJ&view_op=list_works&sortby=pubdate), [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=en), and [Yu Qiao](http://mmlab.siat.ac.cn/yuqiao/) in CVPRW, 2021.
+By [Haoming Cai*](https://scholar.google.com/citations?user=mePn76IAAAAJ&hl=en), [Jingwen He*](https://scholar.google.com/citations?hl=en&user=GUxrycUAAAAJ&view_op=list_works&sortby=pubdate), [Yu Qiao](http://mmlab.siat.ac.cn/yuqiao/), and [Chao Dong](https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=en) in CVPRW, 2021.
 
 <p align="center"> 
   
