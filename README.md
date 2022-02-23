@@ -46,6 +46,7 @@ By [Haoming Cai*](https://scholar.google.com/citations?user=mePn76IAAAAJ&hl=en),
 	1. Modify the configuration file [`options/test/test_CUGAN.yml`](codes/options/test/test_CUGAN.yml). ❗️Importantly, `cond` is crucial in this testing mode.
 	1. Run command:
 	```c++
+	cd codes
 	python test-cugan_specific-cond.py -opt options/test/test_CUGAN.yml
 	```
 
