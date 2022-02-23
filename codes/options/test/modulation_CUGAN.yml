@@ -1,0 +1,44 @@
+name: Test_CUGAN_Range-Conds
+suffix: ~  # add suffix to saved images
+model: srgan
+distortion: sr
+scale: 1
+gpu_ids: [0]
+
+# dataset
+datasets:
+
+  val0:
+     name: CBSD68_DoubleD_Blur10_Noise30
+     mode: LQGT # LQGT (for paired data) | LQ (for real-world data)
+     dataroot_GT: dataset/CBSD68/CBSD68
+     dataroot_LQ: dataset/CBSD68/blur0_noise30
+    # Important! Range for condition.
+     cond_init: [ 0.0, 0.0 ] # starting point of modulation
+     range_mode: 3           # which element you want to iterate, 0 for deblurring only, 1 for denoising only, 3 for both.
+     range_stride: 0.1       # stride for modulation: 0.1, 0.05, 0.01...
+
+  val1:
+     name: NIND
+     mode: LQ
+     dataroot_LQ: dataset/NIND
+     # Important! Range for condition.
+     cond_init: [ 0.0, 0.0 ] # starting point of modulation
+     range_mode: 3           # which element you want to iterate, 0 for deblurring only, 1 for denoising only, 2 for both.
+     range_stride: 0.1       # stride for modulation: 0.1, 0.05, 0.01...
+
+network_G:
+  which_model_G: CUGAN
+  in_nc: 3    # channel of input
+  out_nc: 3   # channel of output
+  cond_dim: 2 # modulation dimension 2
+  stages_blocks_num : [2, 2, 2]     # number of Modulated Residual Block (MRB) in every stage
+  stages_channels : [64, 128, 256]  # channels of Modulated Residual Block (MRB) in every stage
+  downSample_Ksize: 2               # kernel size used for downsample
+
+#### path
+path:
+  pretrain_model_G: pretrain_models/CUGAN.pth
+  strict_load: true
+
+evaluate_metric: ['psnr', 'psnr_y', 'ssim', 'ssim_y', 'lpips', 'dists']

@@ -1,0 +1,46 @@
+
+name: Test_CUGAN_Specific-Conds
+
+suffix: ~
+model: srgan
+distortion: sr
+scale: 1
+gpu_ids: [0]
+
+# dataset
+datasets:
+
+  val0:
+     name: CBSD68_Blur0_Noise30
+     mode: LQGT # LQGT (for paired data) | LQ (for real-world data)
+     cond: [0.0, 0.6] # [for blur, for noise]
+     dataroot_GT: dataset/CBSD68/GT
+     dataroot_LQ: dataset/CBSD68/blur0_noise30
+
+  val1:
+     name: NIND
+     mode: LQ
+     cond: [0.3, 0.8]
+     dataroot_LQ: dataset/NINE
+
+# structure
+network_G:
+  which_model_G: CUGAN
+  in_nc: 3    # channel of input
+  out_nc: 3   # channel of output
+  cond_dim: 2 # modulation dimension 2
+  stages_blocks_num : [2, 2, 2]     # number of Modulated Residual Block (MRB) in every stage
+  stages_channels : [64, 128, 256]  # channels of Modulated Residual Block (MRB) in every stage
+  downSample_Ksize: 2               # kernel size used for downsample
+
+#### path
+path:
+  pretrain_model_G: pretrain_models/CUGAN.pth
+  strict_load: true
+
+evaluate_metric: ['psnr', 'psnr_y', 'ssim', 'ssim_y', 'lpips', 'dists']
+
+
+
+
+
